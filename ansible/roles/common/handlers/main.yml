@@ -1,0 +1,8 @@
+---
+- name: firewalld reload
+  become: yes
+  command: "firewall-cmd --reload"
+
+- name: restart ntp
+  become: yes
+  service: name=ntpd state=restarted

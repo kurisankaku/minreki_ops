@@ -1,0 +1,8 @@
+[webservers]
+localhost  ansible_connection=local
+
+[dbservers]
+localhost  ansible_connection=local
+
+[all:vars]
+target_stage=development

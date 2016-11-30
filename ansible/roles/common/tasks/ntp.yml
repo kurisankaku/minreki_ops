@@ -1,0 +1,16 @@
+---
+- name: install ntp
+  become: yes
+  yum: name=ntp state=present
+
+- name: Include ntp variables.
+  include_vars: ntp_vars.yml
+
+- name: Generate ntp.conf file
+  become: yes
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  notify: restart ntp
+
+- name: Ensure ntpd is running and enabled on boot
+  become: yes
+  service: name=ntpd state=started enabled=yes
