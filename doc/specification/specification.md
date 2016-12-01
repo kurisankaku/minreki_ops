@@ -8,6 +8,7 @@
 1. yardの導入
 
 ## API Format
+1. API設計
 1. APIのベースを作成
 1. APIのテンプレートエンジンの導入
 
