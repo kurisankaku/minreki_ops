@@ -1,4 +1,8 @@
 ---
+- name: Include development user vars.
+  include_vars: development_user_vars.yml
+  when: target_stage == "development"
+
 - name: Ensure MySQL users are present.
   mysql_user:
     name: "{{ item.name }}"
@@ -9,3 +13,4 @@
     append_privs: "{{ item.append_privs | default('no') }}"
   with_items: "{{ mysql_users }}"
   no_log: true
+  ignore_errors: true
