@@ -28,6 +28,7 @@
 ### アカウント削除
 `DELETE /accounts/:id`
   * パラメータにforce=trueをつけること。でないと間違って削除しそう。。。
+
 ### アカウント名変更
 `PUT /accounts/:id/name`
 ### パスワード変更
