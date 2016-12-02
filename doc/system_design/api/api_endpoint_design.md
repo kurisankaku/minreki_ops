@@ -1,6 +1,6 @@
 # API Endpoint Design
 * Domain
-  `https://api.rekithink.com/`
+  `https://api.minreki.com/`
 
 ## ログイン、ログアウト
 ### ログイン
