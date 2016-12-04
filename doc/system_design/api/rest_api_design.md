@@ -69,6 +69,7 @@ Content-Length: 149
 |403|Forbidden|認証はされているが、認可されていないリソースへのリクエストに応答|
 |404|Not Found|存在しないリソースへのリクエストに応答|
 |405|Method Not Allowed|認可されていないメソッドでのリクエストに応答|
+|406|Not Acceptable|正しいAPI versionが指定されていない場合に応答|
 |410|Gone|今は存在しないリソース（廃止されたAPIなど）で空要素を返す場合などに応答|
 |415|Unsupported Media Type|対応していない MediaType が指定された場合に応答|
 |422|Unprocessable Entity|バリデーションエラーに対して応答|
