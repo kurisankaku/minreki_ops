@@ -2,10 +2,10 @@
 
 ## Log Format
 ### 1st version
-* ::Logger::Formatterを使用する
-
-### 2nd version
 * [Lograge](https://github.com/roidrage/lograge)を使用する
+* Lines 形式で出力
+
+### 1st version
 * fluentdにそのまま送るためにJsonに変換する
 
 ## Log保存先
