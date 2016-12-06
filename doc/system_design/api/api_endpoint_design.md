@@ -3,6 +3,13 @@
   `https://api.minreki.com/`
 
 ## ログイン、ログアウト
+1st
+  * APIとして提供するが、minrekiアプリケーション以外は使用できない。
+
+2nd
+  * ログイン、ログアウトの機能は認証認可サーバーにすべて移譲
+  * ログイン、ログアウトのAPI自体をすべて削除
+
 ### ログイン
 `POST /login`
 ### ログアウト
@@ -19,6 +26,25 @@
 `GET /auth/twitter`
 ### Facebook連携OAuth認証
 `GET /auth/facebook`
+
+## 認証処理
+API を外部に提供する際に作成する。(Doorkeeperのものを流用する)
+
+### 認証処理
+`GET /oauth/authorize(.:format) doorkeeper/authorizations#new`
+
+1. ログインされていない場合は、認証サーバーのログイン画面が表示
+1. アプリの認証許可が済んでいない場合は、認証サーバーのアプリ認証許可が画面表示
+1. 認証、認可がされている場合は下記のどちらかの処理
+  * Authorization Code Grant Flowの場合
+    * 設定されているリダイレクトURLにcodeを付与してリダイレクト
+  * Implicit Grant Flowの場合
+    * 設定されているリダイレクトURLにアクセストークンを付与してリダイレクト
+
+### トークン生成(Authorization Code Grant Flow利用時)
+`POST /oauth/token(.:format) doorkeeper/tokens#create`
+### トークン破棄
+`POST /oauth/revoke(.:format) doorkeeper/tokens#revoke`
 
 ## アカウント
 ### アカウント新規登録
