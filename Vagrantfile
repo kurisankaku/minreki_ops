@@ -76,6 +76,6 @@ Vagrant.configure("2") do |config|
     ansible.verbose        = true
     ansible.install        = true
     ansible.limit          = "all" # or only "nodes" group, etc.
-    ansible.inventory_path = "./ansible/development"
+    ansible.inventory_path = "./ansible/inventories/development"
   end
 end

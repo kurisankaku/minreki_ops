@@ -100,7 +100,7 @@ mysql_databases:
     encoding: utf8mb4
 
 # Users.
-mysql_users: []
+# mysql_users: []
 #   - name: example
 #     host: 127.0.0.1
 #     password: secret
