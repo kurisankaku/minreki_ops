@@ -9,7 +9,10 @@
 `/login`
 
 ## 新規登録
+### ユーザー登録
 `/signup`
+### メール認証
+`/signup/confirm_email`
 
 ## 設定
 ### プロフィール
