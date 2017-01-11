@@ -1,3 +1,4 @@
 ---
-- include: dbservers.yml
-- include: redis.yml
+# - include: dbservers.yml
+# - include: redis.yml
+- include: tools.yml

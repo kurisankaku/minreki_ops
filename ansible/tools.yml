@@ -1,0 +1,6 @@
+---
+- hosts: tools
+  become: yes
+  roles:
+    - common
+    - tools

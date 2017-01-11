@@ -1,0 +1,7 @@
+---
+- name: Install imagemagick lib.
+  become: yes
+  yum: name=https://www.imagemagick.org/download/linux/CentOS/x86_64/ImageMagick-libs-7.0.4-3.x86_64.rpm state=present
+- name: Install imagemagick.
+  become: yes
+  yum: name=https://www.imagemagick.org/download/linux/CentOS/x86_64/ImageMagick-7.0.4-3.x86_64.rpm state=present
