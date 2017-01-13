@@ -20,22 +20,22 @@
 * サイズ
   * 複数
 * パス
-  * /prefix-profile/avator/
+  * /prefix-profile/profile_id/avator/
 
 ## プロフィール背景
 * サイズ
   * 複数
 * パス
-  * /prefix-profile/background
+  * /prefix-profile/profile_id/background/
 
 ## 歴史画像
 * サイズ
   * 複数
 * パス
-  * /prefix-history/歴史名/
+  * /prefix-history/history_id/
 
 ## 史実画像
 * サイズ
   * 複数
 * パス
-  * /prefix-history/歴史名/史実名
+  * /prefix-event/event_id/
