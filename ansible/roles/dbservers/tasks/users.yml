@@ -1,5 +1,8 @@
 ---
-- name: Ensure MySQL users are present.
+- name: Flush privileges
+  command: 'mysql -NBe "FLUSH PRIVILEGES"'
+  changed_when: false
+- name:  Ensure MySQL users are present.
   mysql_user:
     name: "{{ item.name }}"
     host: "{{ item.host | default('localhost') }}"
@@ -9,4 +12,3 @@
     append_privs: "{{ item.append_privs | default('no') }}"
   with_items: "{{ mysql_users }}"
   no_log: true
-  ignore_errors: true
