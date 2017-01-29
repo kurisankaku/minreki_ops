@@ -80,9 +80,9 @@ API を外部に提供する際に作成する。(Doorkeeperのものを流用�
 ### フォローユーザー検索
 `GET /users/:id/followings`
 ### フォロー追加
-`POST /users/:id/followers/:follower_id`
+`POST /users/:id/followings`
 ### フォロー削除
-`DELETE /users/:id/followers/:follwer_id`
+`DELETE /users/:id/followings/:follw_user_id`
 
 ## 歴史
 ### 歴史検索
