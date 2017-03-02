@@ -23,6 +23,15 @@
 `/settings/email`
 
 ## ユーザー
+### ユーザー一覧紹介トップ
+`/users`
+### おすすめユーザー一覧
+`/users/recommended`
+### 人気ユーザー一覧
+`/users/popularity`
+### 人気ユーザー日本一覧
+`/users/popularity/country/jp`
+
 ### ユーザートップ
 `/:owner_name`
 ### 歴史一覧
@@ -33,6 +42,23 @@
 `/:owner_name/followings`
 
 ## 歴史
+### 歴史一覧トップ
+`/histories`
+### おすすめ歴史一覧
+`/histories/recommended`
+### 人気歴史一覧
+`/histories/popularity`
+### 人気スポーツ歴史一覧
+`/histories/popularity/sports`
+### イベント一覧トップ
+`/histories/events/`
+### おすすめイベント一覧
+`/histories/events/recommended`
+### 人気イベント一覧
+`/histories/events/popularity`
+### 人気スポーツイベント一覧
+`/histories/events/popularity/sports`
+
 ### 歴史新規作成
 `/:owner_name/histories/new`
 ### 歴史詳細
