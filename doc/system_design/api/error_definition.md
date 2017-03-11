@@ -25,14 +25,12 @@ Content-Length: 149
 
 {
   "message": "Validation Failed",
-  "errors": [
+  "code": "validation_error",
+  "errors":
     {
-      "resource": "Issue",
-      "field": "title",
-      "code": "missing_field"
+      "field_name": ["not_blank", "not_number"],
     }
-  ]
 }
 ```
 * `message`パラメータは必須。
-* `code`はValidation error時に使用。単語を決めておく。
+* `errors: { field_name: }`field_nameは、errorsで一意であり、エラーによって挿入される文字列が異なる。挿入する文字列はエラーの種類によって決めること。
